@@ -69,8 +69,6 @@ All `*.lua` files, apart from `.config/nvim/init.lua` and `.config/nvim/lua/plug
 
 ### [.config/nvim/fnl/plugins/treesitter.fnl](.config/nvim/fnl/plugins/treesitter.fnl)
 
-### [.config/nvim/fnl/plugins/core.fnl](.config/nvim/fnl/plugins/core.fnl)
-
 ### [.config/nvim/fnl/plugins/cmp.fnl](.config/nvim/fnl/plugins/cmp.fnl)
 
 ### [.config/nvim/fnl/config/lsp.fnl](.config/nvim/fnl/config/lsp.fnl)
