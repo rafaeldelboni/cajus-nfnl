@@ -5,7 +5,7 @@ local nvim = autoload("nvim")
 local core = autoload("nfnl.core")
 nvim.set_keymap("n", "<space>", "<nop>", {noremap = true})
 do
-  local options = {expandtab = true, tabstop = 2, shiftwidth = 2, softtabstop = 2, completeopt = "menuone,noselect", ignorecase = true, smartcase = true, clipboard = "unnamedplus", signcolumn = "number"}
+  local options = {expandtab = true, tabstop = 2, shiftwidth = 2, softtabstop = 2, completeopt = "menuone,noselect", ignorecase = true, smartcase = true, clipboard = "unnamedplus", number = true, ruler = true, signcolumn = "number"}
   for option, value in pairs(options) do
     core.assoc(nvim.o, option, value)
   end
