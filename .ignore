@@ -1,0 +1,2 @@
+.config/nvim/lua/**/*.lua
+!.config/nvim/lua/plugins.lua
