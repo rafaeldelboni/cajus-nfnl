@@ -5,6 +5,8 @@
 
 A curvy and juicy neovim configuration following the "Keep it simple!" design principle, but using [nfnl](https://github.com/Olical/nfnl) instead of [aniseed](https://github.com/Olical/nfnl).
 
+Fork from [cajus-nvim](https://github.com/rafaeldelboni/cajus-nvim)
+
 ## What is this?
 Setup config to transform your NVIM in a powerful Clojure IDE using fennel, clojure-lsp and conjure.
 
