@@ -6,7 +6,7 @@ A curvy and juicy neovim configuration following the "Keep it simple!" design pr
 Fork from [cajus-nvim](https://github.com/rafaeldelboni/cajus-nvim)
 
 ## What is this?
-Setup config to transform your NVIM in a powerful Clojure IDE using fennel, clojure-lsp and conjure.
+Setup config to transform your NVIM in a powerful Clojure IDE using fennel, clojure-lsp and conjure.  
 This is simplified version on my personal [dotfiles](https://github.com/rafaeldelboni/dotfiles) setup, I highly recommend you to check it out for more advanced and updated configurations.
 
 ## Prerequisites
