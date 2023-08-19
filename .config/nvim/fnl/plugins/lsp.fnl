@@ -23,7 +23,7 @@
                             (vim.lsp.with
                               vim.lsp.diagnostic.on_publish_diagnostics
                               {:severity_sort true
-                               :update_in_insert false
+                               :update_in_insert true
                                :underline true
                                :virtual_text false})
                             "textDocument/hover"
