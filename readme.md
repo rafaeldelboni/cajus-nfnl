@@ -41,7 +41,10 @@ ln -sf $PWD/.config/nvim $HOME/.config/nvim
  - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) *Quickstart configurations for the Nvim LSP client*
  - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) *Autocompletion plugin*
  - [tokyonight-nvim](https://github.com/folke/tokyonight.nvim) *A clean, dark Neovim theme written in Lua*
- - [tpope-vim-sexp-bundle](https://github.com/tpope/vim-sexp-mappings-for-regular-people) *sexp mappings for regular people*
+ - [nvim-paredit](https://github.com/julienvincent/nvim-paredit) *A Paredit implementation for Neovim, built using Treesitter and written in Lua.*
+ - [nvim-paredit-fennel](https://github.com/julienvincent/nvim-paredit-fennel) *A fennel language extension for nvim-paredit*
+ - [nvim-surround](https://github.com/kylechui/nvim-surround) * Add/change/delete surrounding delimiter pairs with ease. Written with ❤️ in Lua.*
+ - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) *autopairs for neovim written by lua*
  - [lualine](https://github.com/nvim-lualine/lualine.nvim) *neovim statusline plugin written in pure lua*
  - [luasnip](https://github.com/L3MON4D3/LuaSnip) *Snippet Engine for Neovim written in Lua.*
 
@@ -90,8 +93,8 @@ All about nvim's lsp settings and keymaps.
     - `<leader>lr` Show all implementations list for an item under the cursor (Using telescope plugin interface)
 - Lastly, we configure to use all settings above in clojure-lsp server instance.
 
-### [.config/nvim/fnl/plugins/sexp.fnl](.config/nvim/fnl/plugins/sexp.fnl)
-Settings for vim-sexp like enabling it for other lisp languages like Fennel and Jannet
+### [.config/nvim/fnl/plugins/paredit.fnl](.config/nvim/fnl/plugins/paredit.fnl)
+Config for a bundle of plugins to have a modern "vim-sexp-mappings-for-regular-people" like experience for lisp languages like Clojure and Fennel.
 
 ### [.config/nvim/fnl/plugins/telescope.fnl](.config/nvim/fnl/plugins/telescope.fnl)
 Settings like ignore `node_modules` and everything in `.gitignore` to be listed in the file finder.
