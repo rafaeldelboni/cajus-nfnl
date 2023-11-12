@@ -4,7 +4,7 @@ local autoload = _local_1_["autoload"]
 local nvim = autoload("nvim")
 local function _2_()
   local paredit = require("nvim-paredit")
-  return paredit.setup()
+  return paredit.setup({keys = {["<localleader>d"] = {paredit.api.slurp_forwards, "Slurp forwards"}, ["<localleader>D"] = {paredit.api.barf_forwards, "Barf forwards"}, ["<localleader>a"] = {paredit.api.slurp_backwards, "Slurp backwards"}, ["<localleader>A"] = {paredit.api.barf_backwards, "Barf backwards"}}})
 end
 local function _3_()
   local paredit_fnl = require("nvim-paredit-fennel")

@@ -96,6 +96,8 @@ All about nvim's lsp settings and keymaps.
 ### [.config/nvim/fnl/plugins/paredit.fnl](.config/nvim/fnl/plugins/paredit.fnl)
 Config for a bundle of plugins to have a modern "vim-sexp-mappings-for-regular-people" like experience for lisp languages like Clojure and Fennel.
 
+Adds simpler mappings for slurpage and barfage using `<localleader>a|A|d|D`, so that `<localleader>a` and `<localleader>d` move the current form closure backwards or forwards and `<localleader>A` and `<localleader>D` revert these same movements (in vim fashion).
+
 ### [.config/nvim/fnl/plugins/telescope.fnl](.config/nvim/fnl/plugins/telescope.fnl)
 Settings like ignore `node_modules` and everything in `.gitignore` to be listed in the file finder.
 Keymaps:
