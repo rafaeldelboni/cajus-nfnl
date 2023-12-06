@@ -4,9 +4,21 @@
 (fn lsp_connection []
   (let [message (lsp.get-progress-message)]
     (if
+      ; if has progress handler and is loading
       (or (= message.status "begin")
-          (= message.status "report")) (.. message.msg " : " message.percent "%% ")
-      (= message.status "end") ""
+          (= message.status "report"))
+      (.. message.msg " : " message.percent "%% ")
+
+      ; if has progress handler and finished loading
+      (= message.status "end")
+      ""
+
+      ; if hasn't progress handler, but has connected lsp client
+      (and (= message.status "")
+           (not (vim.tbl_isempty (vim.lsp.buf_get_clients 0))))
+      ""
+
+      ; else
       "")))
 
 (lsp_connection)
