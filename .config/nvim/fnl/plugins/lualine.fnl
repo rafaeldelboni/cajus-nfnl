@@ -21,8 +21,6 @@
       ; else
       "")))
 
-(lsp_connection)
-
 [{1 :nvim-lualine/lualine.nvim
   :config (fn []
             (let [lualine (require :lualine)]
