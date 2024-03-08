@@ -1,6 +1,4 @@
-<img src="docs/cajus-nvim.png" width="128" align="right">
-
-# cajus-nfnl
+# cajus-nfnl <img src="docs/cajus-nvim.png" width="128" align="right">
 A curvy and juicy neovim configuration following the "Keep it simple!" design principle, but using [nfnl](https://github.com/Olical/nfnl) instead of [aniseed](https://github.com/Olical/aniseed).
 
 Fork from [cajus-nvim](https://github.com/rafaeldelboni/cajus-nvim)
