@@ -1,9 +1,8 @@
 (local {: autoload} (require :nfnl.module))
-(local nvim (autoload :nvim))
 (local core (autoload :nfnl.core))
 
 ;space is reserved to be lead
-(nvim.set_keymap :n :<space> :<nop> {:noremap true})
+(vim.keymap.set :n :<space> :<nop> {:noremap true})
 
 ;sets a nvim global options
 (let [options
@@ -28,6 +27,6 @@
        ;makes signcolumn always one column with signs and linenumber
        :signcolumn "number"}]
   (each [option value (pairs options)]
-    (core.assoc nvim.o option value)))
+    (core.assoc vim.o option value)))
 
 {}

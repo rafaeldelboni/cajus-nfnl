@@ -1,6 +1,3 @@
-(local {: autoload} (require :nfnl.module))
-(local nvim (autoload :nvim))
-
 [{1 :folke/tokyonight.nvim
   :lazy false
   :priority 1000
