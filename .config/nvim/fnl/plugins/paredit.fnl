@@ -1,6 +1,3 @@
-(local {: autoload} (require :nfnl.module))
-(local nvim (autoload :nvim))
-
 [{1 :julienvincent/nvim-paredit
   :lazy true
   :ft [:clojure :fennel]
