@@ -4,11 +4,7 @@ local function _1_()
   return paredit.setup()
 end
 local function _2_()
-  local paredit_fnl = require("nvim-paredit-fennel")
-  return paredit_fnl.setup()
-end
-local function _3_()
   local surround = require("nvim-surround")
   return surround.setup()
 end
-return {{"julienvincent/nvim-paredit", lazy = true, ft = {"clojure", "fennel"}, config = _1_}, {"julienvincent/nvim-paredit-fennel", dependencies = {"julienvincent/nvim-paredit"}, lazy = true, ft = {"fennel"}, config = _2_}, {"kylechui/nvim-surround", event = "VeryLazy", config = _3_}, {"windwp/nvim-autopairs", event = "InsertEnter", opts = {}}}
+return {{"julienvincent/nvim-paredit", lazy = true, ft = {"clojure", "fennel", "scheme", "lisp"}, config = _1_}, {"kylechui/nvim-surround", event = "VeryLazy", config = _2_}, {"windwp/nvim-autopairs", event = "InsertEnter", opts = {}}}
