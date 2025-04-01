@@ -15,7 +15,7 @@
 
       ; if hasn't progress handler, but has connected lsp client
       (and (= message.status "")
-           (not (vim.tbl_isempty (vim.lsp.buf_get_clients 0))))
+           (not (vim.tbl_isempty (vim.lsp.get_clients))))
       ""
 
       ; else

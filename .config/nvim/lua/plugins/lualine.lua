@@ -8,7 +8,7 @@ local function lsp_connection()
     return (message.msg .. " : " .. message.percent .. "%% \239\130\150")
   elseif (message.status == "end") then
     return "\239\131\136"
-  elseif ((message.status == "") and not vim.tbl_isempty(vim.lsp.buf_get_clients(0))) then
+  elseif ((message.status == "") and not vim.tbl_isempty(vim.lsp.get_clients())) then
     return "\239\131\136"
   else
     return "\239\130\150"
