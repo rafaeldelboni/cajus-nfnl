@@ -37,13 +37,13 @@ ln -sf $PWD/.config/nvim $HOME/.config/nvim
  - [telescope](https://github.com/nvim-telescope/telescope.nvim) *Find, Filter, Preview, Pick*
  - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) *Incremental parsing system for highlighting, indentation, or folding*
  - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) *Quickstart configurations for the Nvim LSP client*
- - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) *Autocompletion plugin*
- - [tokyonight-nvim](https://github.com/folke/tokyonight.nvim) *A clean, dark Neovim theme written in Lua*
+ - [blink.cmp](https://github.com/Saghen/blink.cmp) *Performant, batteries-included completion plugin for Neovim*
+ - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) *A clean, dark Neovim theme written in Lua*
  - [nvim-paredit](https://github.com/julienvincent/nvim-paredit) *A Paredit implementation for Neovim, built using Treesitter and written in Lua.*
  - [nvim-paredit-fennel](https://github.com/julienvincent/nvim-paredit-fennel) *A fennel language extension for nvim-paredit*
  - [nvim-surround](https://github.com/kylechui/nvim-surround) * Add/change/delete surrounding delimiter pairs with ease. Written with ❤️ in Lua.*
  - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) *autopairs for neovim written by lua*
- - [lualine](https://github.com/nvim-lualine/lualine.nvim) *neovim statusline plugin written in pure lua*
+ - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) *neovim statusline plugin written in pure lua*
  - [luasnip](https://github.com/L3MON4D3/LuaSnip) *Snippet Engine for Neovim written in Lua.*
 
 ## Files
@@ -71,7 +71,6 @@ All about nvim's lsp settings and keymaps.
 - In the first session, we define which symbols to show for lsp diagnostics.
 - Later we describe which features and server settings we want to enable/customize.
   - Handler defines features and how we want to render the server outputs.
-  - Capabilities we link with our autocompletion plugin (nvim-cmp), to say to the lsp servers that we have this feature enabled.
   - On_Attach we customize our interaction with the LSP server, here we define the following keymaps:
     - `gd` Go to definition
     - `K` Show documentation
@@ -109,7 +108,7 @@ Conjure specifics settings, I like to remap the doc work keymap to be `<locallea
 Settings to select which treesitter's features we want to be enabled and which language extension we want to ensure they will be always installed.
 
 ### [.config/nvim/fnl/plugins/cmp.fnl](.config/nvim/fnl/plugins/cmp.fnl)
-Here settings of which sources we want to show up in the autocomple menu like (conjure, lsp, buffer) and some mapping to navigate in the menu.
+Settings of which sources we want to show up in the autocomplete menu like (conjure, lsp, buffer) and some mapping to navigate in the menu.
 
 ### [.config/nvim/fnl/config/lsp.fnl](.config/nvim/fnl/config/lsp.fnl)
 Setup a global state to define lsp's startup status, for later be read by lualine.
