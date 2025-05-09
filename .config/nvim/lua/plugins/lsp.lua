@@ -1,10 +1,8 @@
--- [nfnl] Compiled from fnl/plugins/lsp.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] fnl/plugins/lsp.fnl
 vim.diagnostic.config({signs = {text = {[vim.diagnostic.severity.ERROR] = "\239\129\151", [vim.diagnostic.severity.WARN] = "\239\129\177", [vim.diagnostic.severity.INFO] = "\239\129\154", [vim.diagnostic.severity.HINT] = "\239\129\153"}}})
 local function _1_()
   local lsp = require("lspconfig")
-  local cmplsp = require("cmp_nvim_lsp")
   local handlers = {["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {severity_sort = true, update_in_insert = true, underline = true, virtual_text = false}), ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {border = "single"}), ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {border = "single"})}
-  local capabilities = cmplsp.default_capabilities()
   local before_init
   local function _2_(params)
     params.workDoneToken = "1"
@@ -31,6 +29,6 @@ local function _1_()
     return vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>li", ":lua require('telescope.builtin').lsp_implementations()<cr>", {noremap = true})
   end
   on_attach = _3_
-  return lsp.clojure_lsp.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities})
+  return lsp.clojure_lsp.setup({on_attach = on_attach, handlers = handlers, before_init = before_init})
 end
 return {{"neovim/nvim-lspconfig", config = _1_}}

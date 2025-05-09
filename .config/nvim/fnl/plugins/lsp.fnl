@@ -7,7 +7,6 @@
 [{1 :neovim/nvim-lspconfig
   :config (fn []
             (let [lsp (require :lspconfig)
-                  cmplsp (require :cmp_nvim_lsp)
                   handlers {"textDocument/publishDiagnostics"
                             (vim.lsp.with
                               vim.lsp.diagnostic.on_publish_diagnostics
@@ -23,7 +22,7 @@
                             (vim.lsp.with
                               vim.lsp.handlers.signature_help
                               {:border "single"})}
-                  capabilities (cmplsp.default_capabilities)
+
                   before_init (fn [params]
                                 (set params.workDoneToken :1))
                   on_attach (fn [client bufnr]
@@ -52,5 +51,4 @@
               ;; Clojure
               (lsp.clojure_lsp.setup {:on_attach on_attach
                                       :handlers handlers
-                                      :before_init before_init
-                                      :capabilities capabilities})))}]
+                                      :before_init before_init})))}]
