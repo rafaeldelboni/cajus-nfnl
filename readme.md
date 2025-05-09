@@ -10,7 +10,7 @@ This is simplified version on my personal [dotfiles](https://github.com/rafaelde
 ## Prerequisites
 Things you need installed in your OS to use this setup
 - [git](https://git-scm.com/downloads)
-- [nvim](https://neovim.io/)
+- [nvim v0.11+](https://neovim.io/)
 - [rg](https://github.com/BurntSushi/ripgrep)
 - [clojure-lsp](https://github.com/clojure-lsp/clojure-lsp)
 - [nerd-fonts](https://www.nerdfonts.com/)
