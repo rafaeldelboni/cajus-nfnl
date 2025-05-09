@@ -6,8 +6,7 @@
 
 [{1 :neovim/nvim-lspconfig
   :config (fn []
-            (let [lsp (require :lspconfig)
-                  handlers {"textDocument/publishDiagnostics"
+            (let [handlers {"textDocument/publishDiagnostics"
                             (vim.lsp.with
                               vim.lsp.diagnostic.on_publish_diagnostics
                               {:severity_sort true
@@ -45,10 +44,19 @@
                                 (vim.api.nvim_buf_set_keymap bufnr :n :<leader>lr ":lua require('telescope.builtin').lsp_references()<cr>" {:noremap true})
                                 (vim.api.nvim_buf_set_keymap bufnr :n :<leader>li ":lua require('telescope.builtin').lsp_implementations()<cr>" {:noremap true})))]
 
-              ;; To add support to more language servers check:
-              ;; https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+              ;; For more language servers check:
+              ;; https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
+
+              (vim.lsp.config :* {:on_attach on_attach
+                                  :handlers handlers
+                                  :before_init before_init})
 
               ;; Clojure
-              (lsp.clojure_lsp.setup {:on_attach on_attach
-                                      :handlers handlers
-                                      :before_init before_init})))}]
+              (vim.lsp.config :clojure_lsp {:root_dir (fn [bufnr on_dir]
+                                                        (let [pattern (vim.api.nvim_buf_get_name bufnr)
+                                                              util (require :lspconfig.util)
+                                                              fallback (vim.loop.cwd)
+                                                              patterns [:project.clj :deps.edn :build.boot :shadow-cljs.edn :.git :bb.edn]
+                                                              root ((util.root_pattern patterns) pattern)]
+                                                          (on_dir (or root fallback))))})
+              (vim.lsp.enable :clojure_lsp)))}]
