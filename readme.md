@@ -40,7 +40,6 @@ ln -sf $PWD/.config/nvim $HOME/.config/nvim
  - [blink.cmp](https://github.com/Saghen/blink.cmp) *Performant, batteries-included completion plugin for Neovim*
  - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) *A clean, dark Neovim theme written in Lua*
  - [nvim-paredit](https://github.com/julienvincent/nvim-paredit) *A Paredit implementation for Neovim, built using Treesitter and written in Lua.*
- - [nvim-paredit-fennel](https://github.com/julienvincent/nvim-paredit-fennel) *A fennel language extension for nvim-paredit*
  - [nvim-surround](https://github.com/kylechui/nvim-surround) * Add/change/delete surrounding delimiter pairs with ease. Written with ❤️ in Lua.*
  - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) *autopairs for neovim written by lua*
  - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) *neovim statusline plugin written in pure lua*
